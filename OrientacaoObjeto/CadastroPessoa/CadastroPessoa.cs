@@ -15,24 +15,24 @@ namespace CadastroPessoa
             pessoa2 = new Pessoa();
 
             Console.Write("Digite o nome da pessoa1: ");
-            pessoa1.nome = Console.ReadLine();
+            pessoa1.Nome = Console.ReadLine();
 
             Console.Write("Digite a idade da pessoa1: ");
-            pessoa1.idade = int.Parse(Console.ReadLine());
+            pessoa1.Idade = int.Parse(Console.ReadLine());
 
             Console.Write("Digite o nome da pessoa1: ");
-            pessoa1.nome = Console.ReadLine();
+            pessoa1.Nome = Console.ReadLine();
 
             Console.Write("Digite a idade da pessoa1: ");
-            pessoa1.idade = int.Parse(Console.ReadLine());
+            pessoa1.Idade = int.Parse(Console.ReadLine());
 
-            if (pessoa1.idade > pessoa2.idade)
+            if (pessoa1.Idade > pessoa2.Idade)
             {
-                Console.WriteLine($"A pessoa mais velha é: {pessoa1.nome}");
+                Console.WriteLine($"A pessoa mais velha é: {pessoa1.Nome}");
             }
             else
             {
-                Console.WriteLine($"A pessoa mais velha é: {pessoa2.nome}");
+                Console.WriteLine($"A pessoa mais velha é: {pessoa2.Nome}");
             }
         }
     }
