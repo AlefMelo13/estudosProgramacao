@@ -7,8 +7,4 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Compile Include="H:\Projetos Visual Studio\OrientacaoObjeto\PrimeiroProjetoOO\PrimeiroProjetoOO.cs" Link="PrimeiroProjetoOO.cs" />
-  </ItemGroup>
-
 </Project>
