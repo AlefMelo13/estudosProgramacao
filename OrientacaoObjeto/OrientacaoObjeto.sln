@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Primeiros Projetos Orientad
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroPessoa", "CadastroPessoa\CadastroPessoa.csproj", "{3540179D-A33B-4816-B973-A1C701450030}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarioFuncionario", "SalarioFuncionario\SalarioFuncionario.csproj", "{F418A574-42A1-4069-8D14-3657FAC6F825}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,18 @@ Global
 		{3540179D-A33B-4816-B973-A1C701450030}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3540179D-A33B-4816-B973-A1C701450030}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3540179D-A33B-4816-B973-A1C701450030}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F418A574-42A1-4069-8D14-3657FAC6F825}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F418A574-42A1-4069-8D14-3657FAC6F825}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F418A574-42A1-4069-8D14-3657FAC6F825}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F418A574-42A1-4069-8D14-3657FAC6F825}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{97523706-1FBC-4261-9ED9-F9CF7A0F16A5} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
+		{3540179D-A33B-4816-B973-A1C701450030} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
+		{F418A574-42A1-4069-8D14-3657FAC6F825} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FA70F02-2BC1-468C-B018-56F751777316}
