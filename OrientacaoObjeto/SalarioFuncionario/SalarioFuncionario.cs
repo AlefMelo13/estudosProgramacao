@@ -16,18 +16,18 @@ namespace SalarioFuncionario
             funcionario2 = new Funcionario();
 
             Console.Write("Digite o nome do primeiro funcionário: ");
-            funcionario1.nome = Console.ReadLine();
+            funcionario1.Nome = Console.ReadLine();
 
             Console.Write("Digite o salário do segundo funcionário: ");
-            funcionario1.salario = double.Parse(Console.ReadLine());
+            funcionario1.Salario = double.Parse(Console.ReadLine());
 
             Console.Write("Digite o nome do primeiro funcionário: ");
-            funcionario2.nome = Console.ReadLine();
+            funcionario2.Nome = Console.ReadLine();
 
             Console.Write("Digite o salário do segundo funcionário: ");
-            funcionario2.salario = double.Parse(Console.ReadLine());
+            funcionario2.Salario = double.Parse(Console.ReadLine());
 
-            mediaSalario = (funcionario1.salario + funcionario2.salario) / 2;
+            mediaSalario = (funcionario1.Salario + funcionario2.Salario) / 2;
 
             Console.WriteLine("A média dos salários dos funcionários é: " + mediaSalario.ToString("F2"));
         }
