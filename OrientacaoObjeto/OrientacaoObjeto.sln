@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32602.215
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PrimeiroProjetoOO", "OrientacaoObjeto\PrimeiroProjetoOO.csproj", "{97523706-1FBC-4261-9ED9-F9CF7A0F16A5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AreaTriangulo", "OrientacaoObjeto\AreaTriangulo.csproj", "{97523706-1FBC-4261-9ED9-F9CF7A0F16A5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Primeiros Projetos Orientados a Objeto", "Primeiros Projetos Orientados a Objeto", "{8E391CC7-B26D-41ED-BAC8-0EE5F926B050}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroPessoa", "CadastroPessoa\CadastroPessoa.csproj", "{3540179D-A33B-4816-B973-A1C701450030}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroPessoa", "CadastroPessoa\CadastroPessoa.csproj", "{3540179D-A33B-4816-B973-A1C701450030}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SalarioFuncionario", "SalarioFuncionario\SalarioFuncionario.csproj", "{F418A574-42A1-4069-8D14-3657FAC6F825}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SalarioFuncionario", "SalarioFuncionario\SalarioFuncionario.csproj", "{F418A574-42A1-4069-8D14-3657FAC6F825}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroProduto", "CadastroProduto\CadastroProduto.csproj", "{B92C779E-8EF4-48BE-8561-8C982744D239}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{F418A574-42A1-4069-8D14-3657FAC6F825}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F418A574-42A1-4069-8D14-3657FAC6F825}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F418A574-42A1-4069-8D14-3657FAC6F825}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B92C779E-8EF4-48BE-8561-8C982744D239}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B92C779E-8EF4-48BE-8561-8C982744D239}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B92C779E-8EF4-48BE-8561-8C982744D239}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B92C779E-8EF4-48BE-8561-8C982744D239}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -37,6 +43,7 @@ Global
 		{97523706-1FBC-4261-9ED9-F9CF7A0F16A5} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{3540179D-A33B-4816-B973-A1C701450030} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{F418A574-42A1-4069-8D14-3657FAC6F825} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
+		{B92C779E-8EF4-48BE-8561-8C982744D239} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FA70F02-2BC1-468C-B018-56F751777316}
