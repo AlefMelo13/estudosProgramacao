@@ -23,11 +23,19 @@ namespace CadastroProduto
             Console.WriteLine("Dados cadastrados com sucesso!");
             Console.WriteLine();
 
-            Console.WriteLine($"Nome do produto: {produto.Nome}");
-            Console.WriteLine("Preço do produto: " + produto.Preco.ToString("F2"));
-            Console.WriteLine($"Quantidade do produto: {produto.Quantidade}");
+            Console.WriteLine("Dados do Produto cadastrado: ");
+            Console.WriteLine(produto);
 
             Console.WriteLine("O valor total do estoque do produto é: " + produto.ValorTotalEstoque().ToString("F2"));
+
+            Console.WriteLine();
+
+            Console.WriteLine("Digite a quantidade de produtos a ser adicionada ao estoque: ");
+            int quantidade = int.Parse(Console.ReadLine());
+            produto.AdicionarProduto(quantidade);
+
+            Console.WriteLine("Dados atualizados do Produto: ");
+            Console.WriteLine(produto);
         }
     }
 }
