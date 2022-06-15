@@ -5,7 +5,7 @@ namespace CadastroProduto
 {
     class CadastroProduto
     {
-        static void Main(string[] args) // eu mexi aquio
+        static void Main(string[] args)
         {
             Console.WriteLine("---------- CADASTRO DE PRODUTO ---------");
 
