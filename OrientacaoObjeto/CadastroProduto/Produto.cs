@@ -17,9 +17,14 @@ namespace CadastroProduto
             return (Quantidade * Preco);
         }
 
-        public void AdicionarProduto(int quantidade)
+        public void AdicionarProduto(int adicionaQuantidade)
         {
-            Quantidade += quantidade;
+            Quantidade += adicionaQuantidade;
+        }
+
+        public void RemoverProduto(int removeQuantidade)
+        {
+            Quantidade -= removeQuantidade;
         }
         public override string ToString()
         {

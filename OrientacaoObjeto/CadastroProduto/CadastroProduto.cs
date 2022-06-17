@@ -30,12 +30,37 @@ namespace CadastroProduto
 
             Console.WriteLine();
 
-            Console.WriteLine("Digite a quantidade de produtos a ser adicionada ao estoque: ");
-            int quantidade = int.Parse(Console.ReadLine());
-            produto.AdicionarProduto(quantidade);
+            //ADICIONANDO QUANTIDADE NO ESTOQUE DO PRODUTO
+            Console.Write("Você deseja adicionar quantidade ao estoque do produto (s/n)? ");
+            string s = Console.ReadLine();
 
-            Console.WriteLine("Dados atualizados do Produto: ");
-            Console.WriteLine(produto);
+            if (s == "s")
+            {
+                Console.Write("Digite a quantidade de produtos a ser ADICIONADA ao estoque: ");
+                int adicionaQuantidade = int.Parse(Console.ReadLine());
+                produto.AdicionarProduto(adicionaQuantidade);
+
+                Console.WriteLine("Dados atualizados do Produto: ");
+                Console.WriteLine(produto);
+
+                Console.WriteLine("O valor total do estoque do produto é: " + produto.ValorTotalEstoque().ToString("F2"));
+            }
+
+            //REMOVENDO QUANTIDADE NO ESTOQUE DO PRODUTO
+            Console.Write("Você deseja remover quantidade do estoque do produto (s/n)? ");
+            string n = Console.ReadLine();
+            
+            if(n == "s")
+            {
+                Console.Write("Digite a quantidade de produtos a ser REMOVIDA ao estoque: ");
+                int removeQuantidade = int.Parse(Console.ReadLine());
+                produto.RemoverProduto(removeQuantidade);
+
+                Console.WriteLine("Dados atualizados do Produto: ");
+                Console.WriteLine(produto);
+
+                Console.WriteLine("O valor total do estoque do produto é: " + produto.ValorTotalEstoque().ToString("F2"));
+            }
         }
     }
 }
