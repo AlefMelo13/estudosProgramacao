@@ -17,9 +17,13 @@ namespace CadastroProduto
             return (Quantidade * Preco);
         }
 
-        public int AdicionaProduto()
+        public void AdicionarProduto(int quantidade)
         {
-            return 
+            Quantidade += quantidade;
+        }
+        public override string ToString()
+        {
+            return Nome + ", R$" + Preco.ToString("F2") + ", " + Quantidade + " unidades.";
         }
     }
 }
