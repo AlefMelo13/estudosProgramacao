@@ -9,15 +9,19 @@ namespace CadastroProduto
         {
             Console.WriteLine("---------- CADASTRO DE PRODUTO ---------");
 
-            Produto produto = new Produto();
 
             Console.WriteLine("Digite as informações do produto");
             Console.Write("Nome: ");
-            produto.Nome = Console.ReadLine();
+            string nome = Console.ReadLine();
+
             Console.Write("Preço: ");
-            produto.Preco = double.Parse(Console.ReadLine());
+            double preco = double.Parse(Console.ReadLine());
+
             Console.Write("Quantidade: ");
-            produto.Quantidade = int.Parse(Console.ReadLine());
+            int quantidade = int.Parse(Console.ReadLine());
+
+            //ATRIBUIÇÃO DE VALORES AO CONSTRUTOR
+            Produto produto = new Produto(nome, preco, quantidade);
 
             Console.WriteLine();
             Console.WriteLine("Dados cadastrados com sucesso!");
