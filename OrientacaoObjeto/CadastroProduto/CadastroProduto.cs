@@ -49,8 +49,8 @@ namespace CadastroProduto
             //REMOVENDO QUANTIDADE NO ESTOQUE DO PRODUTO
             Console.Write("Você deseja remover quantidade do estoque do produto (s/n)? ");
             string n = Console.ReadLine();
-            
-            if(n == "s")
+
+            if (n == "s")
             {
                 Console.Write("Digite a quantidade de produtos a ser REMOVIDA ao estoque: ");
                 int removeQuantidade = int.Parse(Console.ReadLine());
