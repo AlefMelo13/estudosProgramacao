@@ -18,14 +18,25 @@ namespace ContaBancaria
             Console.Write("Haverá depósito inicial(s/n): ");
             string resposta = Console.ReadLine();
 
+            //ESTRUTURA DE CONDIÇÃO PARA DEPÓSITO INICIAL
             if (resposta == "s")
             {
                 Console.Write("Digite o valor a ser depositado: ");
                 double valorDeposito = double.Parse(Console.ReadLine());
-            }
-                Conta conta = new Conta();
-
+                Conta conta = new Conta(cliente, numeroConta, valorDeposito);
                 Console.WriteLine(conta);
+            }
+            else
+            {
+                Conta conta = new Conta(cliente, numeroConta);
+                Console.WriteLine(conta);
+            }
+
+            //DEPÓSITO DE DINHEIRO EM CONTA
+            Console.WriteLine();
+            Console.Write("Digite um valor para depósito: ");
+            double deposito = double.Parse(Console.ReadLine());
+            Conta.SetDeposito(deposito);
         }
     }
 }
