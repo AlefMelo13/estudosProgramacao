@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConversorMoeda", "Conversor
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ContaBancaria", "ContaBancaria\ContaBancaria.csproj", "{8D1AE5EE-FA89-4658-B514-F63B7C5FA6A0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VetorProduto", "VetorProduto\VetorProduto.csproj", "{7D35BF90-3974-453D-946A-BF10F53019E8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VetorProduto", "VetorProduto\VetorProduto.csproj", "{7D35BF90-3974-453D-946A-BF10F53019E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculadora", "Calculadora\Calculadora.csproj", "{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -71,6 +73,10 @@ Global
 		{7D35BF90-3974-453D-946A-BF10F53019E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D35BF90-3974-453D-946A-BF10F53019E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D35BF90-3974-453D-946A-BF10F53019E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -86,6 +92,7 @@ Global
 		{035D5E22-9578-410C-ACFD-93DBD2D29D36} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{8D1AE5EE-FA89-4658-B514-F63B7C5FA6A0} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{7D35BF90-3974-453D-946A-BF10F53019E8} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
+		{A818F0ED-1FF7-47D8-82D2-6986A8E71B0C} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FA70F02-2BC1-468C-B018-56F751777316}
