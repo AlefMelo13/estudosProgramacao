@@ -35,5 +35,10 @@ namespace ContaBancaria
         {
             ValorDeposito += deposito;
         }
+
+        public void SetSaque(double saque)
+        {
+            ValorDeposito -= saque;
+        }
     }
 }
