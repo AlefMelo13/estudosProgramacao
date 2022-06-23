@@ -54,6 +54,10 @@ namespace CadastroProduto
             Console.WriteLine(produto);
 
             Console.WriteLine("O valor total do estoque do produto é: " + produto.ValorTotalEstoque().ToString("F2"));
+
+            Console.WriteLine(produto.GetNome());
+            Console.WriteLine(produto.GetPreco());
+            Console.WriteLine(produto.GetQuantidade());
         }
     }
 }
