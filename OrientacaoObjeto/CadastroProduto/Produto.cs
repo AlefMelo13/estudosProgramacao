@@ -31,6 +31,26 @@ namespace CadastroProduto
             _nome = nome;
         }
 
+        public double GetPreco()
+        {
+            return _preco;
+        }
+
+        public void SetPreco(double preco)
+        {
+            _preco = preco;
+        }
+
+        public int GetQuantidade()
+        {
+            return _quantidade;
+        }
+
+        public void SetQuantidade(int quantidade)
+        {
+            _quantidade = quantidade;
+        }
+
         //MÉTODOS DE CÁLCULO DA CLASSE
         public double ValorTotalEstoque()
         {
