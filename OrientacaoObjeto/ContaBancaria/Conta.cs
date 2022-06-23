@@ -28,7 +28,7 @@ namespace ContaBancaria
 
         public override string ToString()
         {
-            return "Dados da Conta: Conta: " + NumeroConta + "; Titular: " + _cliente + "; Saldo: " + ValorDeposito;
+            return "Conta: " + NumeroConta + "; Titular: " + _cliente + "; Saldo: " + ValorDeposito;
         }
 
         public void SetDeposito(double deposito)
