@@ -1,24 +1,14 @@
 ﻿namespace Calculadora
 {
-    internal class Calculo
+    internal class CalculoSoma
     {
-        public int Numero { get; set; }
-        public int Soma { get; set; }
-        public int Subtracao { get; set; }
-        public int Divisao { get; set; }
-        public int Mulriplicacao { get; set; }
+        public static int Soma;
+        public static int Numero;
+        public static int Operacao;
 
-        public void SetSoma(int numero)
-        {
-            int[] soma = new int[10];
-
-            for (int i = 0; i < 10; i++)
-            {
-                soma[i] = numero * i;
-            }
-
-
-        }
-
+    //    public static int Soma(int numero, int operacao)
+    //    {
+    //        return 
+    //    }
     }
 }
