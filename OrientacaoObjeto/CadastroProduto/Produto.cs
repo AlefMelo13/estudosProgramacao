@@ -9,15 +9,15 @@ namespace CadastroProduto
     internal class Produto
     {
         private string _nome;
-        private double _preco;
-        private int _quantidade;
+        public double Preco { get; private set; }
+        public int Quantidade { get; private set; }
 
         //CONSTRUTOR - OBRIGA O OBJETO TER VALORES DE ENTRADA
         public Produto(string nome, double preco, int quantidade)
         {
             _nome = nome;
-            _preco = preco;
-            _quantidade = quantidade;
+            Preco = preco;
+            Quantidade = quantidade;
         }
 
         //EMCAPSULAMENTO DE CLASSE
@@ -33,44 +33,44 @@ namespace CadastroProduto
 
         public double GetPreco()
         {
-            return _preco;
+            return Preco;
         }
 
         public void SetPreco(double preco)
         {
-            _preco = preco;
+            Preco = preco;
         }
 
         public int GetQuantidade()
         {
-            return _quantidade;
+            return Quantidade;
         }
 
         public void SetQuantidade(int quantidade)
         {
-            _quantidade = quantidade;
+            Quantidade = quantidade;
         }
 
         //MÉTODOS DE CÁLCULO DA CLASSE
         public double ValorTotalEstoque()
         {
-            return (_quantidade * _preco);
+            return (Quantidade * Preco);
         }
 
         public void AdicionarProduto(int adicionaQuantidade)
         {
-            _quantidade += adicionaQuantidade;
+            Quantidade += adicionaQuantidade;
         }
 
         public void RemoverProduto(int removeQuantidade)
         {
-            _quantidade -= removeQuantidade;
+            Quantidade -= removeQuantidade;
         }
 
         //IMPRIME OS DADOS NA TELA SEM PRECISAR CONTATENAR NO CÓDIGO PRINCIPAL
         public override string ToString()
         {
-            return _nome + ", R$" + _preco.ToString("F2") + ", " + _quantidade + " unidades.";
+            return _nome + ", R$" + Preco.ToString("F2") + ", " + Quantidade + " unidades.";
         }
     }
 }
