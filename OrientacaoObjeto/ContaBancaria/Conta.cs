@@ -8,32 +8,36 @@ namespace ContaBancaria
 {
     class Conta
     {
-        private string _cliente;
+        public string Titular { get; set; }
         public double NumeroConta { get; private set; }
-        public double ValorDeposito { get; private set; }
+        public double Saldo { get; private set; }
 
         //CONSTRUTORES DA CLASSE CONTA
-        public Conta(string cliente, double numeroConta, double valorDeposito)
+        public Conta(string titular, double numeroConta)
         {
-            _cliente = cliente;
+            Titular = titular;
             NumeroConta = numeroConta;
-            ValorDeposito = valorDeposito;
         }
 
-        public Conta(string cliente, double numeroConta)
+        public Conta(string titular, double numeroConta, double valorDeposito) : this (titular, numeroConta)
         {
-            _cliente = cliente;
-            NumeroConta = numeroConta;
+            Saldo = valorDeposito;
         }
 
         public override string ToString()
         {
-            return "Conta: " + NumeroConta + "; Titular: " + _cliente + "; Saldo: " + ValorDeposito;
+            return "Conta: " + NumeroConta + "; Titular: " + Titular + "; Saldo: R$" + Saldo;
         }
 
+        //ENCAPSULAMENTO DE ATRIBUTOS
         public void SetDeposito(double deposito)
         {
-            ValorDeposito += deposito;
+            Saldo += deposito;
+        }
+
+        public void SetSaque(double saque)
+        {
+            Saldo -= saque + 5;
         }
     }
 }
