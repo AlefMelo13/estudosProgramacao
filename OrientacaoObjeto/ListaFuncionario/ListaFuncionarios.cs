@@ -12,6 +12,8 @@
 
             Console.WriteLine("Digite os dados dos funcionáros:");
 
+            List<Funcionario> funcionario = new List<Funcionario>();
+
             for (int i = 0; i < n; i++)
             {
                 Console.Write("Digite o ID: ");
@@ -21,15 +23,34 @@
                 string nome = Console.ReadLine();
 
                 Console.Write("Digite o salário: ");
-                double salario = int.Parse(Console.ReadLine());
+                double salario = double.Parse(Console.ReadLine());
 
-                List<string> nomeFuncionario = new List<string> { nome };
-                List<int> idFuncionario = new List<int> { id };
-                List<double> salarioFuncionario = new List<double> { salario };
+                funcionario.Add(new Funcionario(id, nome, salario));
             }
 
+            Console.Write("Digite o ID do funcionário a receber aumento: ");
+            int searchId = int.Parse(Console.ReadLine());
 
+            Funcionario procuraFuncionario = funcionario.Find(x => x.Id == searchId);
 
+            if (procuraFuncionario != null)
+            {
+                Console.Write("Digite o percentual a ser aumentado: ");
+                int porcentagem = int.Parse(Console.ReadLine());
+                procuraFuncionario.AcrescimoSalario(porcentagem);
+            }
+            else
+            {
+                Console.WriteLine("Usuário não localizado!");
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Lista de Funcionários:");
+
+            foreach (Funcionario lista in funcionario)
+            {
+                Console.WriteLine(lista);
+            }
         }
     }
 }
