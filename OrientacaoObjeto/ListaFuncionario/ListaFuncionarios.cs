@@ -28,7 +28,6 @@
                 List<double> salarioFuncionario = new List<double> { salario };
             }
 
-           
 
 
         }
