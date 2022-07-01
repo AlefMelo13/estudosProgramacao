@@ -1,5 +1,8 @@
-﻿namespace CadastroProdutoLista
+﻿using System.Globalization;
+
+namespace CadastroProdutoLista
 {
+
     internal class CadastroProduto
     {
         static void Main(string[] args)
@@ -42,15 +45,15 @@
 
             //ADICIONA QUANTIDADE AO PRODUTO
             Console.Write("Digite o código do produto para adicionar quantidade: ");
-            int searchId = int.Parse(Console.ReadLine());
-            Produto alteraQuantidade = produto.Find(x => x.Codigo == searchId);
+            int idAdicionaQuantidade = int.Parse(Console.ReadLine());
+            Produto produtoAlteraQuantidade = produto.Find(x => x.Codigo == idAdicionaQuantidade);
 
-            if (alteraQuantidade != null)
+            if (produtoAlteraQuantidade != null)
             {
                 Console.Write("Digite a quantidade a ser adicionada: ");
                 int quantAdiciona = int.Parse(Console.ReadLine());
 
-                alteraQuantidade.AdicionaProduto(quantAdiciona);
+                produtoAlteraQuantidade.AdicionaProduto(quantAdiciona);
             }
             else
             {
@@ -59,6 +62,7 @@
 
             Console.WriteLine();
 
+            //EXIBE A LISTA DE PRODUTOS ATUALIZADA
             Console.WriteLine("Lista de produtos atualizada: ");
 
             foreach (Produto obj in produto)
@@ -70,14 +74,14 @@
             Console.WriteLine();
 
             Console.Write("Digite o código do produto para alterar o preço: ");
-            int serachId = int.Parse(Console.ReadLine());
-            Produto alteraPreco = produto.Find(x => x.Codigo == serachId);
+            int idAlteraPreco = int.Parse(Console.ReadLine());
+            Produto produtoAlteraPreco = produto.Find(x => x.Codigo == idAlteraPreco);
 
-            if (alteraPreco != null)
+            if (produtoAlteraPreco != null)
             {
-                Console.WriteLine($"Digite o novo preço do produto {searchId}: ");
-                int novoPreco = int.Parse(Console.ReadLine());
-                alteraPreco.AlteraPreco(novoPreco);
+                Console.Write($"Digite o novo preço do produto {idAlteraPreco}: ");
+                double novoPreco = double.Parse(Console.ReadLine());
+                produtoAlteraPreco.AlteraPreco(novoPreco);
             }
             else
             {
@@ -86,6 +90,36 @@
 
             Console.WriteLine();
 
+            //EXIBE A LISTA DE PRODUTOS ATUALIZADA
+            Console.WriteLine("Lista de produtos atualizada: ");
+
+            foreach (Produto obj in produto)
+            {
+                Console.WriteLine(obj);
+            }
+
+            Console.WriteLine();
+
+            //REMOVENDO PRODUTO DA LISTA
+            Console.Write("Digite o código do produto a ser removido: ");
+            int idRemocaoProduto = int.Parse(Console.ReadLine());
+
+            Produto removeProduto = produto.Find(x => x.Codigo == idRemocaoProduto);
+
+            if (removeProduto != null)
+            {
+                produto.Remove(removeProduto);
+                Console.WriteLine();
+                Console.WriteLine("------- Produto Removido! -------");
+            }
+            else
+            {
+                Console.WriteLine("Código inválido!");
+            }
+
+            Console.WriteLine();
+
+            //EXIBE A LISTA DE PRODUTOS ATUALIZADA
             Console.WriteLine("Lista de produtos atualizada: ");
 
             foreach (Produto obj in produto)

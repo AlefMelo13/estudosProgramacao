@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Globalization;
 
 namespace CadastroProdutoLista
 {
@@ -29,13 +30,13 @@ namespace CadastroProdutoLista
             Preco = preco;
         }
 
-        //CLASSE PARA ADICIONAR PRODUTO AO ESTOQUE
+        //ADICIONAR PRODUTO AO ESTOQUE
         public void AdicionaProduto(int quantidade)
         {
             Quantidade += quantidade;
         }
 
-        //CLASSE PARA ALTERAR O PREÇO O PRODUTO
+        //ALTERAR O PREÇO O PRODUTO
         public void AlteraPreco(double novoPreco)
         {
             Preco = novoPreco;
@@ -44,7 +45,7 @@ namespace CadastroProdutoLista
         //TO STRING PARRA EXIBIR A LISTA DE PRODUTOS NO PROJETO PRINCIPAL
         public override string ToString()
         {
-            return "Código: " + Codigo + "| Nome: " + Nome + "| Preço: R$" + Preco.ToString("F2") + "| Quantidade: " + Quantidade;
+            return "Código: " + Codigo + "| Nome: " + Nome + "| Preço: R$" + Preco.ToString("F2", CultureInfo.InvariantCulture) + "| Quantidade: " + Quantidade;
         }
     }
 }
