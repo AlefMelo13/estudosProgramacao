@@ -18,16 +18,16 @@ namespace CadastroProdutoLista
             {
                 Console.WriteLine("-----------------------------");
 
-                Console.Write($"Digite o código do produto {i+1}: ");
+                Console.Write($"Código do produto {i+1}: ");
                 int codigo = int.Parse(Console.ReadLine());
 
-                Console.Write("Digite o nome do produto: ");
+                Console.Write("Nome: ");
                 string nome = Console.ReadLine();
 
-                Console.Write("Digite o preço do produto: ");
+                Console.Write("Preço: ");
                 double preco = double.Parse(Console.ReadLine());
 
-                Console.Write("Digite o quantidade do produto: ");
+                Console.Write("Quantidade: ");
                 int quantidade = int.Parse(Console.ReadLine());
 
                 produto.Add(new Produto(codigo, nome, preco, quantidade));
@@ -35,6 +35,7 @@ namespace CadastroProdutoLista
 
             Console.WriteLine();
 
+            Console.WriteLine("Lista de Produtos Cadastrados:");
             //EXIBE A LISTA DE PRODUTOS CADASTRADA
             foreach (Produto obj in produto)
             {
