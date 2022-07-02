@@ -35,9 +35,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Lista", "Lista\Lista.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListaFuncionario", "ListaFuncionario\ListaFuncionario.csproj", "{0B3C5FB4-DD29-49BB-AD8E-8BACC2C048CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CadastroProdutoLista", "CadastroProdutoLista\CadastroProdutoLista.csproj", "{6B41C526-4280-46D9-BE3B-E3986783C667}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CadastroProdutoLista", "CadastroProdutoLista\CadastroProdutoLista.csproj", "{6B41C526-4280-46D9-BE3B-E3986783C667}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MembroInstituicao", "MembroInstituicao\MembroInstituicao.csproj", "{9215C220-F59E-41DE-944D-F87B3CEFCAD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MembroInstituicao", "MembroInstituicao\MembroInstituicao.csproj", "{9215C220-F59E-41DE-944D-F87B3CEFCAD9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Matriz", "Matriz\Matriz.csproj", "{9ABE7D48-68E3-431A-9AFC-16520758F122}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -113,6 +115,10 @@ Global
 		{9215C220-F59E-41DE-944D-F87B3CEFCAD9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9215C220-F59E-41DE-944D-F87B3CEFCAD9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9215C220-F59E-41DE-944D-F87B3CEFCAD9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ABE7D48-68E3-431A-9AFC-16520758F122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ABE7D48-68E3-431A-9AFC-16520758F122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ABE7D48-68E3-431A-9AFC-16520758F122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ABE7D48-68E3-431A-9AFC-16520758F122}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -135,6 +141,7 @@ Global
 		{0B3C5FB4-DD29-49BB-AD8E-8BACC2C048CA} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{6B41C526-4280-46D9-BE3B-E3986783C667} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 		{9215C220-F59E-41DE-944D-F87B3CEFCAD9} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
+		{9ABE7D48-68E3-431A-9AFC-16520758F122} = {8E391CC7-B26D-41ED-BAC8-0EE5F926B050}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0FA70F02-2BC1-468C-B018-56F751777316}
