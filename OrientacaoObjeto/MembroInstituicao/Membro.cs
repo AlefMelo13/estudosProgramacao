@@ -34,14 +34,14 @@ namespace MembroInstituicao
 
         public override string ToString()
         {
-            return "Código: " + Codigo +
-                   "Nome: " + Nome +
-                   "Idade: " + Idade +
-                   "Endereço: " +Endereco +
-                   "Bairro: " + Bairro +
-                   "Cidade: " + Cidade +
-                   "Estado :" + Estado +
-                   "Telefone: " + Telefone;
+            return " Código: " + Codigo +
+                   "\r\n Nome: " + Nome +
+                   "\r\n Idade: " + Idade +
+                   "\r\n Endereço: " +Endereco +
+                   "\r\n Bairro: " + Bairro +
+                   "\r\n Cidade: " + Cidade +
+                   "\r\n Estado :" + Estado +
+                   "\r\n Telefone: " + Telefone;
         }
     }
 }
