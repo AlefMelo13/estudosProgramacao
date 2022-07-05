@@ -32,5 +32,27 @@ namespace ContratosTrabalhadores.Entities
         {
             Contratos.Remove(contrato);
         }
+
+        public double Ganho(int ano, int mes)
+        {
+            double soma = BaseSalario;
+            foreach (HoraContrato contrato in Contratos)
+            {
+                if (contrato.Data.Year == ano && contrato.Data.Month == mes)
+                {
+                    soma += contrato.ValorTotalContrato();
+                }
+            }
+
+            return soma;
+        }
+
+        public override string ToString()
+        {
+            return "Nome: " + Nome
+                  +"\r\nNível: " + Nivel
+                  +"\r\nBase Salário: " + BaseSalario
+                  +"\r\nDepartamento: " + Departamento;
+        }
     }
 }
