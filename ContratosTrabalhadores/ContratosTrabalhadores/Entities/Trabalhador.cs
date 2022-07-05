@@ -23,16 +23,19 @@ namespace ContratosTrabalhadores.Entities
             Departamento = departamento;
         }
 
+        //MÉTODO PARA ADICIONAR CONTRATO
         public void AddContrato(HoraContrato contrato)
         {
             Contratos.Add(contrato);
         }
 
+        //MÉTODO PARA REMOVER CONTRATO
         public void RemoveContrato(HoraContrato contrato)
         {
             Contratos.Remove(contrato);
         }
 
+        //MÉTODO PARA CALCULAR HGANHO DO FUNCIONÁRIO
         public double Ganho(int ano, int mes)
         {
             double soma = BaseSalario;
