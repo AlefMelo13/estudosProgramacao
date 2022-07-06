@@ -66,7 +66,7 @@ namespace ContratosTrabalhadores
 
             Console.WriteLine("Nome do Trabalhador: " + trabalhador.Nome);
 
-            Console.WriteLine("Departamento; " + departamento.Nome);
+            Console.WriteLine("Departamento: " + departamento.Nome);
 
             Console.WriteLine($"Ganho em {mesAnoGanho}: " + trabalhador.Ganho(ano, mes).ToString("F2"));
         }
