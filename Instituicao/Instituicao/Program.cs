@@ -106,10 +106,10 @@ namespace Instituicao
             Console.WriteLine(enderecoInstituicao);
             Console.WriteLine();
 
-            Membros membro = new Membros();
+            Membros me = new Membros();
 
             Console.WriteLine("Membros da instituição:");
-            foreach(Membros m in membro)
+            foreach(Membros m in me)
             {
                 Console.WriteLine(m.ToString());
             }
