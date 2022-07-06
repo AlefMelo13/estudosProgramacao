@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Text;
 
 namespace PostSocialMedia.Entities
 {
@@ -35,6 +31,24 @@ namespace PostSocialMedia.Entities
         public void RemoveComentario(Comentarios comentario)
         {
             Comentarios.Remove(comentario);
+        }
+
+        public override string ToString()
+        {
+            StringBuilder post = new StringBuilder();
+            post.AppendLine(Titulo);
+            post.Append(Likes + " Likes - ");
+            post.AppendLine(Momento.ToString());
+            post.AppendLine(Conteudo);
+            post.AppendLine();
+
+            post.AppendLine("Comentários:");
+            foreach (Comentarios coment in Comentarios)
+            {
+                post.AppendLine(coment.Texto);
+            }
+
+            return post.ToString();
         }
     }
 }
