@@ -23,14 +23,39 @@ namespace ContratosTrabalhadores.Entities
             Departamento = departamento;
         }
 
+        //MÉTODO PARA ADICIONAR CONTRATO
         public void AddContrato(HoraContrato contrato)
         {
             Contratos.Add(contrato);
         }
 
+        //MÉTODO PARA REMOVER CONTRATO
         public void RemoveContrato(HoraContrato contrato)
         {
             Contratos.Remove(contrato);
+        }
+
+        //MÉTODO PARA CALCULAR HGANHO DO FUNCIONÁRIO
+        public double Ganho(int ano, int mes)
+        {
+            double soma = BaseSalario;
+            foreach (HoraContrato contrato in Contratos)
+            {
+                if (contrato.Data.Year == ano && contrato.Data.Month == mes)
+                {
+                    soma += contrato.ValorTotalContrato();
+                }
+            }
+
+            return soma;
+        }
+
+        public override string ToString()
+        {
+            return "Nome: " + Nome
+                  +"\r\nNível: " + Nivel
+                  +"\r\nBase Salário: " + BaseSalario
+                  +"\r\nDepartamento: " + Departamento;
         }
     }
 }
