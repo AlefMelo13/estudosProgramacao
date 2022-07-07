@@ -8,7 +8,7 @@ namespace PostSocialMedia.Entities
         public string Titulo { get; set; }
         public string Conteudo { get; set; }
         public int Likes { get; set; }
-        List<Comentarios> Comentarios { get; set; } = new List<Comentarios>();
+        public List<Comentarios> Comentarios { get; set; } = new List<Comentarios>();
 
         //CONSTRUTORES
         public Postagens()
