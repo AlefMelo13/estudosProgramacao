@@ -34,10 +34,10 @@ namespace DesafioPedido.Entities
         public override string ToString()
         {
             StringBuilder itemPedido = new StringBuilder();
-            itemPedido.Append(Nome);
-            itemPedido.Append(", R$" + Preco);
+            itemPedido.Append("Nome: " + Nome.ToString());
+            itemPedido.Append(", Preço: R$" + Preco);
             itemPedido.Append(", Quantidade: " + Quantidade);
-            itemPedido.Append(", SubTotal: " + SubTotal);
+            itemPedido.Append(", SubTotal: " + SubTotal());
 
             return itemPedido.ToString();
         }

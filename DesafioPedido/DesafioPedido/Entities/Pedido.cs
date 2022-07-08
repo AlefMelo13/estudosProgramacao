@@ -61,7 +61,8 @@ namespace DesafioPedido.Entities
             {
                 pedido.AppendLine(ped.ToString());
             }
-            pedido.AppendLine("PreçoTotal: " + TotalPedido().ToString("F2"));
+            Console.WriteLine();
+            pedido.AppendLine("Preço Total: " + TotalPedido().ToString("F2"));
 
             return pedido.ToString();
         }
