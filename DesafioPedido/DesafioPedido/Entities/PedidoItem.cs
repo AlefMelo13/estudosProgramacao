@@ -9,7 +9,7 @@ namespace DesafioPedido.Entities
 {
     class PedidoItem
     {
-        public Produto Nome { get; set; }
+        public Produto NomeProduto { get; set; }
         public int Quantidade { get; set; }
         public double Preco { get; set; }
 
@@ -20,7 +20,7 @@ namespace DesafioPedido.Entities
 
         public PedidoItem(Produto nome, int quantidade, double preco)
         {
-            Nome = nome;
+            NomeProduto = nome;
             Quantidade = quantidade;
             Preco = preco;
         }
@@ -34,7 +34,7 @@ namespace DesafioPedido.Entities
         public override string ToString()
         {
             StringBuilder itemPedido = new StringBuilder();
-            itemPedido.Append("Nome: " + Nome.ToString());
+            itemPedido.Append("Nome: " + NomeProduto);
             itemPedido.Append(", Preço: R$" + Preco);
             itemPedido.Append(", Quantidade: " + Quantidade);
             itemPedido.Append(", SubTotal: " + SubTotal());
