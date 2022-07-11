@@ -15,17 +15,12 @@ namespace DesafioPedido.Entities
         public List<PedidoItem> ItemPedido { get; set; } = new List<PedidoItem>();
 
         //CONSTRUTORES
-        public Pedido()
-        {
-        }
-
         public Pedido(DateTime momento, Cliente cliente, StatusPedido status)
         {
+            Clinte = cliente;
             Momento = momento;
             Status = status;
         }
-
-
 
         //MÉTODOS DA CLASSE
         public void AdicionaItem(PedidoItem itemPedido)
@@ -57,11 +52,12 @@ namespace DesafioPedido.Entities
             pedido.AppendLine("Cliente: " + Clinte);
             pedido.AppendLine("Itens Pedido:");
 
-            foreach(PedidoItem ped in ItemPedido)
+            foreach (PedidoItem ped in ItemPedido)
             {
                 pedido.AppendLine(ped.ToString());
             }
-            pedido.AppendLine("PreçoTotal: " + TotalPedido().ToString("F2"));
+            Console.WriteLine();
+            pedido.AppendLine("Preço Total: " + TotalPedido().ToString("F2"));
 
             return pedido.ToString();
         }

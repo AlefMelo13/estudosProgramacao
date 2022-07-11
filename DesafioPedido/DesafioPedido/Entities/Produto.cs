@@ -25,11 +25,7 @@ namespace DesafioPedido.Entities
 
         public override string ToString()
         {
-            StringBuilder produto = new StringBuilder();
-            produto.AppendLine("Nome: " + Nome);
-            produto.AppendLine("Preço: " + Preco);
-
-            return produto.ToString();
+            return Nome;
         }
     }
 }

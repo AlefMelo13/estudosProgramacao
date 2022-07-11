@@ -27,9 +27,7 @@ namespace DesafioPedido.Entities
         public override string ToString()
         {
             StringBuilder cliente = new StringBuilder();
-            cliente.Append("Cliente: " + Nome);
-            cliente.Append(" (" + DataNascimento);
-            cliente.Append(") - " + Email);
+            cliente.Append(Nome);
 
             return cliente.ToString();
         }
