@@ -11,8 +11,8 @@
 
         public override double Pagamento()
         {
-            base.Pagamento();
-            return DespesaAdicional * 110 / 100;
+            return
+            base.Pagamento() + DespesaAdicional * 110 / 100;
         }
     }
 }

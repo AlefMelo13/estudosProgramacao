@@ -1,4 +1,5 @@
-﻿using EmpresaFuncionario.Entities;
+﻿using System.Collections.Generic;
+using EmpresaFuncionario.Entities;
 
 namespace EmpresaFuncionario
 {
@@ -10,6 +11,9 @@ namespace EmpresaFuncionario
 
             Console.Write("Quantos funcionários serão cadastrados? ");
             int n = int.Parse(Console.ReadLine());
+            Console.WriteLine("---------------------------------------");
+
+            List<Funcionario> funcionario = new List<Funcionario>();
 
             for (int i = 1; i <= n; i++)
             {
@@ -18,27 +22,33 @@ namespace EmpresaFuncionario
 
                 Console.Write("O funcionário é terceirizado(s/n)? ");
                 string resposta = Console.ReadLine();
+                Console.Write("Nome: ");
+                string nome = Console.ReadLine();
+                Console.Write("Horas trabalhadas: ");
+                int horasTrabalhadas = int.Parse(Console.ReadLine());
+                Console.Write("Valor por hora: ");
+                double valorHora = double.Parse(Console.ReadLine());
 
-                if(resposta == "n" || resposta == "N")
+                if (resposta == "s" || resposta == "S")
                 {
-                    Console.WriteLine();
+                    Console.Write("Despesa adicional: ");
+                    double despesaAdicional = double.Parse(Console.ReadLine());
 
-                    Console.Write("Nome: ");
-                    string nome = Console.ReadLine();
-                    Console.Write("Horas trabalhadas: ");
-                    int horasTrabalhadas = int.Parse(Console.ReadLine());
-                    Console.Write("Valor por hora: ");
-                    double valorHora = double.Parse(Console.ReadLine());
-
-                    List<Funcionario> funcionario = new Funcionario(nome, horasTrabalhadas, valorHora);
+                    funcionario.Add(new FuncionarioTerceirizado(nome, horasTrabalhadas, valorHora, despesaAdicional));
                 }
                 else
                 {
-
+                    funcionario.Add(new Funcionario(nome, horasTrabalhadas, valorHora));
                 }
+                Console.WriteLine();
             }
-            
+            Console.WriteLine();
+            Console.WriteLine("Pagamentos:");
 
+            foreach (Funcionario fun in funcionario)
+            {
+                Console.WriteLine(fun.Nome + ": R$" + fun.Pagamento().ToString("F2"));
+            }
         }
     }
 }
