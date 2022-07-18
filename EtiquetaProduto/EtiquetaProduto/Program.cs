@@ -16,6 +16,7 @@ namespace EtiquetaProduto
 
             for (int i = 1; i <= n; i++)
             {
+                Console.WriteLine($"Produto {i}:");
                 Console.Write("Comum, usado ou importado (c/u/i)? ");
                 string resposta = Console.ReadLine();
 
@@ -38,7 +39,7 @@ namespace EtiquetaProduto
 
                     produto.Add(new ProdutoImportado(nomeProduto, precoProduto, taxaAlfandega));
                 }
-                else
+                if (resposta == "c" || resposta == "C")
                 {
                     produto.Add(new Produto(nomeProduto, precoProduto));
                 }
