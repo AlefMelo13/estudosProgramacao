@@ -25,7 +25,7 @@ namespace EtiquetaProduto
                 Console.Write("Preço: ");
                 double precoProduto = double.Parse(Console.ReadLine());
 
-                if(resposta == "u" || resposta == "U")
+                if (resposta == "u" || resposta == "U")
                 {
                     Console.Write("Data Fabricação: ");
                     DateTime dataFabricacao = DateTime.Parse(Console.ReadLine());
