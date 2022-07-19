@@ -3,7 +3,7 @@ using Figuras.Entities.Enums;
 
 namespace Figuras
 {
-    internal class Program
+    class Program
     {
         static void Main(string[] args)
         {
