@@ -19,7 +19,12 @@ namespace SaqueConta.Entities
 
         public void Deposito(double valorDeposito)
         {
-            SaldoConta = valorDeposito;
+            if(valorDeposito == 0)
+            {
+                throw new DomainException("Valor de depósito inválido!");
+            }
+
+            SaldoConta += valorDeposito;
         }
 
         public void Saque(double valorSaque)
@@ -34,6 +39,14 @@ namespace SaqueConta.Entities
             }
 
             SaldoConta -= valorSaque;
+        }
+
+        public override string ToString()
+        {
+            return "Conta: " + NumeroConta
+                 + ", Titular: " + TitularConta
+                 + ", Saldo: " + SaldoConta
+                 + ", Limite Saque: "+ LimiteSaque;
         }
     }
 }

@@ -28,21 +28,58 @@ namespace SaqueConta
             Conta conta = new Conta(numeroConta, titularConta, saldoConta, limiteSaque);
 
             Console.WriteLine();
-            Console.Write("Digite o valor do saque: ");
-            double valorSaque = double.Parse(Console.ReadLine());
+            Console.WriteLine("Dados da Conta: ");
+            Console.WriteLine(conta.ToString());
 
-            try
+            Console.Write("Deseja fazer um depósito(s/n)? ");
+            string resposta = Console.ReadLine();
+
+            if (resposta == "s" || resposta == "S")
             {
-                conta.Saque(valorSaque);
-                Console.WriteLine();
+                Console.Write("Valor do Depósito: ");
+                double valorDeposito = double.Parse(Console.ReadLine());
 
-                Console.WriteLine("Novo Saldo: " + conta.SaldoConta);
+                conta.Deposito(valorDeposito);
+
+                Console.WriteLine();
+                Console.WriteLine("Saldo Atualizado:");
+                Console.WriteLine(conta.ToString());
+                Console.WriteLine();
             }
-
-            catch (DomainException e)
+            else
             {
                 Console.WriteLine();
-                Console.WriteLine("Erro: " + e.Message);
+                Console.WriteLine("Continuação do programa...");
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+            Console.Write("Deseja efetuar um saque(s/n)? ");
+            resposta = Console.ReadLine();
+
+            if (resposta == "s" || resposta == "S")
+            {
+                Console.WriteLine();
+                Console.Write("Valor do saque: ");
+                double valorSaque = double.Parse(Console.ReadLine());
+
+                try
+                {
+                    conta.Saque(valorSaque);
+                    Console.WriteLine();
+
+                    Console.WriteLine("Saldo Atualizado:");
+                    Console.WriteLine(conta.ToString());
+                }
+
+                catch (DomainException e)
+                {
+                    Console.WriteLine();
+                    Console.WriteLine("Erro: " + e.Message);
+                }
+            }
+            else
+            {
+                Console.WriteLine(conta.ToString());
             }
         }
     }
