@@ -15,7 +15,7 @@ namespace ControlePonto.Entities
 
         public void Entrada(DateTime dataHoraEntrada)
         {
-            DateTime agora = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss");
+            DateTime agora = DateTime.UtcNow;
             if(dataHoraEntrada == null)
             {
                 throw new DomainException("Data Invalida!");
