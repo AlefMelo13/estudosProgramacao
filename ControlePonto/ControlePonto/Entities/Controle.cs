@@ -16,11 +16,11 @@ namespace ControlePonto.Entities
         public void Entrada(DateTime dataHoraEntrada)
         {
             DateTime agora = DateTime.UtcNow;
-            if(dataHoraEntrada == null)
+            if(dataHoraEntrada.Date == null || dataHoraEntrada.Hour == null)
             {
-                throw new DomainException("Data Invalida!");
+                throw new DomainException("Data ou Hora Invalidas!");
             }
-            else if (dataHoraEntrada < agora)
+            else if (dataHoraEntrada.Hour < agora.Hour)
             {
                 throw new DomainException("Digite uma data maior ");
             }
@@ -29,6 +29,14 @@ namespace ControlePonto.Entities
 
         public void Saida(DateTime dataHoraSaida)
         {
+            if(dataHoraSaida.Date == null || dataHoraSaida.Hour == null)
+            {
+                throw new DomainException("Data ou Hora Inválidas!");
+            }
+            else if(dataHoraSaida.Date <= DataHoraEntrada.Date || dataHoraSaida.Hour <= DataHoraEntrada.Hour)
+            {
+                throw new DomainException("Digite uma data e hora maior que a Entrada!");
+            }
             DataHoraEntrada = dataHoraSaida;
         }
     }

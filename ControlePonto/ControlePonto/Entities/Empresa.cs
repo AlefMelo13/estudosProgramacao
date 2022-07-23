@@ -9,7 +9,7 @@ namespace ControlePonto.Entities
         public string CnpjEmpresa { get; set; }
         public List<Funcionario> FuncionarioEmpresa { get; set; } = new List<Funcionario>();
 
-        public Empresa(string nomeEmpresa, string cnpjEmpresa, Funcionario funcionarioEmpresa)
+        public Empresa(string nomeEmpresa, string cnpjEmpresa)
         {
             NomeEmpresa = nomeEmpresa;
             CnpjEmpresa = cnpjEmpresa;
