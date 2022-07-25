@@ -4,10 +4,14 @@ namespace SaqueConta.Entities
 {
     class Conta : ApplicationException
     {
-        public int NumeroConta { get; set; }
+        public int NumeroConta { get; private set; }
         public string TitularConta { get; set; }
         public double SaldoConta { get; set; }
         public double LimiteSaque { get; set; }
+
+        public Conta()
+        {
+        }
 
         public Conta(int numeroConta, string titularConta, double saldoConta, double limiteSaque)
         {
@@ -37,16 +41,31 @@ namespace SaqueConta.Entities
             {
                 throw new DomainException("Valor excede limite de saque!");
             }
+            else if(valorSaque <= 0)
+            {
+                throw new DomainException("Digite um valor maior que zero!");
+            }
 
             SaldoConta -= valorSaque;
         }
 
+        public void NumConta(int numeroConta)
+        {
+            if (numeroConta <= 0 || numeroConta == null)
+            {
+                throw new DomainException("Digite um número de conta válido!");
+            }
+
+            NumeroConta = numeroConta;
+        }
         public override string ToString()
         {
-            return "Conta: " + NumeroConta
+            return "=================================================================="
+                 + "\r\n Conta: " + NumeroConta
                  + ", Titular: " + TitularConta
-                 + ", Saldo: " + SaldoConta
-                 + ", Limite Saque: "+ LimiteSaque;
+                 + ", Saldo: R$" + SaldoConta.ToString("F2")
+                 + ", Limite Saque: R$"+ LimiteSaque.ToString("F2")
+                 + "\r\n==================================================================";
         }
     }
 }

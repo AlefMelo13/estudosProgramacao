@@ -10,11 +10,30 @@ namespace SaqueConta
             Console.WriteLine("---------- SAQUE CONTA ----------");
             Console.WriteLine();
 
+            Conta conta = new Conta();
+
             Console.WriteLine("Digite os dados da conta:");
             Console.WriteLine();
 
-            Console.Write("Número: ");
-            int numeroConta = int.Parse(Console.ReadLine());
+            int numeroConta = 0;
+
+            while (numeroConta <= 0 || numeroConta == null)
+            {
+                try
+                {
+                    Console.Write("Número: ");
+                    numeroConta = int.Parse(Console.ReadLine());
+                    conta.NumConta(numeroConta);
+                }
+                catch (DomainException f)
+                {
+                    Console.WriteLine("Erro: " + f.Message);
+                }
+                catch(FormatException f)
+                {
+                    Console.WriteLine("Erro: Digite um número inteiro!");
+                }
+            }
 
             Console.Write("Titular: ");
             string titularConta = Console.ReadLine();
@@ -22,14 +41,16 @@ namespace SaqueConta
             Console.Write("Saldo Inicial: ");
             double saldoConta = double.Parse(Console.ReadLine());
 
-            Console.Write("Limite de Saque:");
+            Console.Write("Limite de Saque: ");
             double limiteSaque = double.Parse(Console.ReadLine());
 
-            Conta conta = new Conta(numeroConta, titularConta, saldoConta, limiteSaque);
+            conta = new Conta(numeroConta, titularConta, saldoConta, limiteSaque);
+
 
             Console.WriteLine();
             Console.WriteLine("Dados da Conta: ");
             Console.WriteLine(conta.ToString());
+            Console.WriteLine();
 
             Console.Write("Deseja fazer um depósito(s/n)? ");
             string resposta = Console.ReadLine();
@@ -50,7 +71,6 @@ namespace SaqueConta
             {
                 Console.WriteLine();
                 Console.WriteLine("Continuação do programa...");
-                Console.WriteLine();
             }
             Console.WriteLine();
             Console.Write("Deseja efetuar um saque(s/n)? ");
@@ -58,27 +78,40 @@ namespace SaqueConta
 
             if (resposta == "s" || resposta == "S")
             {
-                Console.WriteLine();
-                Console.Write("Valor do saque: ");
-                double valorSaque = double.Parse(Console.ReadLine());
+                double valorSaque = 0.0;
 
-                try
-                {
-                    conta.Saque(valorSaque);
-                    Console.WriteLine();
-
-                    Console.WriteLine("Saldo Atualizado:");
-                    Console.WriteLine(conta.ToString());
-                }
-
-                catch (DomainException e)
+                while (valorSaque <= 0.0 || valorSaque > saldoConta || valorSaque > limiteSaque)
                 {
                     Console.WriteLine();
-                    Console.WriteLine("Erro: " + e.Message);
+                    Console.Write("Valor do saque: ");
+                    valorSaque = double.Parse(Console.ReadLine());
+
+                    try
+                    {
+                        conta.Saque(valorSaque);
+                        Console.WriteLine();
+                        Console.WriteLine("*** Saque Efetuado! ***");
+                        Console.WriteLine();
+
+                        Console.WriteLine("Saldo Atualizado:");
+                        Console.WriteLine();
+                        Console.WriteLine(conta.ToString());
+                    }
+
+                    catch (DomainException e)
+                    {
+                        Console.WriteLine();
+                        Console.WriteLine("Erro: " + e.Message);
+                    }
                 }
             }
             else
             {
+                Console.WriteLine();
+                Console.WriteLine("*** Programa Finalizado! ***");
+                Console.WriteLine();
+
+                Console.WriteLine("Dados da Conta: ");
                 Console.WriteLine(conta.ToString());
             }
         }
