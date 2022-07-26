@@ -18,9 +18,9 @@
 
         public override string ToString()
         {
-            return "Pagamento Básico: " + PagamentoBasico.ToString("F2")
-                 + "\nTaxa: " + Taxa.ToString("F2")
-                 + "\nPagamento Total: " + PagamentoTotal.ToString("F2");
+            return "Pagamento Básico: R$" + PagamentoBasico.ToString("F2")
+                 + "\nTaxa: R$" + Taxa.ToString("F2")
+                 + "\nPagamento Total: R$" + PagamentoTotal.ToString("F2");
         }
     }
 }

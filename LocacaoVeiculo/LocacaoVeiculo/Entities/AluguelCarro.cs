@@ -7,10 +7,10 @@
         public Veiculo Veiculo { get; set; }
         public Fatura Fatura { get; set; }
 
-        public AluguelCarro(DateTime dataInicio, DateTime dataFim, Veiculo veiculo)
+        public AluguelCarro(DateTime dataRetirada, DateTime dataRetorno, Veiculo veiculo)
         {
-            DataRetirada = dataInicio;
-            DataRetorno = dataFim;
+            DataRetirada = dataRetirada;
+            DataRetorno = dataRetorno;
             Veiculo = veiculo;
         }
     }
