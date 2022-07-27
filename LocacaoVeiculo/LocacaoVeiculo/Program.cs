@@ -27,7 +27,7 @@ namespace LocacaoVeiculo
 
             AluguelCarro aluguelCarro = new AluguelCarro(dataRetirada, dataRetorno, new Veiculo(modeloCarro));
 
-            ServicoAluguel servicoAluguel = new ServicoAluguel(precoPorHora, precoPorDia);
+            ServicoAluguel servicoAluguel = new ServicoAluguel(precoPorHora, precoPorDia, new TaxaServicoBrasil());
 
             servicoAluguel.ProcessaFatura(aluguelCarro);
 
