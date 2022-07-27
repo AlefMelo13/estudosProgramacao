@@ -2,8 +2,9 @@
 {
     public class TaxaServicoBrasil : IServicoTaxa
     {
-        public double Taxa(double quantia) {
-            if(quantia <= 100)
+        public double Taxa(double quantia)
+        {
+            if (quantia <= 100)
             {
                 return quantia * 20 / 100;
             }
