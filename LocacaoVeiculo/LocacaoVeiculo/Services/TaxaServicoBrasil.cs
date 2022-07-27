@@ -1,6 +1,6 @@
 ﻿namespace LocacaoVeiculo.Services
 {
-    public class TaxaServicoBrasil
+    public class TaxaServicoBrasil : IServicoTaxa
     {
         public double Taxa(double quantia) {
             if(quantia <= 100)

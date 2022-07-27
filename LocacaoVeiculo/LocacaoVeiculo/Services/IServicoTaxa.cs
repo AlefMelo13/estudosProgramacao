@@ -1,6 +1,6 @@
 ﻿namespace LocacaoVeiculo.Services
 {
-    interface IServicoTaxa
+    public interface IServicoTaxa
     {
         double Taxa(double quantia);
     }
