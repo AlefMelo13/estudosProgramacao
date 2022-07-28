@@ -2,15 +2,18 @@
 {
     public class TaxaServicoBrasil : IServicoTaxa
     {
-        public double Taxa(double quantia)
+        public double TaxaAluguel(double pagamentoBasico)
         {
-            if (quantia <= 100)
+            double PorcentagemNormal = 20.0 / 100.0;
+            double PorcentagemDesonto = 15.0 / 100.0;
+
+            if (pagamentoBasico <= 100)
             {
-                return quantia * 20 / 100;
+                return pagamentoBasico * PorcentagemNormal;
             }
             else
             {
-                return quantia * 15 / 100;
+                return pagamentoBasico * PorcentagemDesonto;
             }
         }
     }
