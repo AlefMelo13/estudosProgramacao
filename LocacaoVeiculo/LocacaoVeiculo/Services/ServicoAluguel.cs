@@ -16,7 +16,7 @@ namespace LocacaoVeiculo.Services
             _taxaServico = taxaServico;
         }
 
-        public void ProcessaFatura(AluguelCarro aluguelCarro)
+        public void CriaFatura(AluguelCarro aluguelCarro)
         {
             TimeSpan duracao = aluguelCarro.DataRetorno.Subtract(aluguelCarro.DataRetirada);
 
@@ -31,7 +31,7 @@ namespace LocacaoVeiculo.Services
                 pagamentoBasico = PrecoPorDia * Math.Ceiling(duracao.TotalDays);
             }
 
-            double taxa = _taxaServico.Taxa(pagamentoBasico);
+            double taxa = _taxaServico.TaxaAluguel(pagamentoBasico);
 
             aluguelCarro.Fatura = new Fatura(pagamentoBasico, taxa);
         }

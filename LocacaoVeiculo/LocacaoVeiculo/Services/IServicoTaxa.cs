@@ -2,6 +2,6 @@
 {
     public interface IServicoTaxa
     {
-        double Taxa(double quantia);
+        double TaxaAluguel(double pagamentoBasico);
     }
 }
