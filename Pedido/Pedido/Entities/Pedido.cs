@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 
 
-namespace Pedido.Entities
+namespace PedidoVenda.Entities
 {
     public class Pedido
     {
@@ -18,7 +18,15 @@ namespace Pedido.Entities
             Cliente = cliente;
         }
 
-
+        public decimal TotalPedido()
+        {
+            decimal total = 0;
+            foreach (Produto produto in Produto)
+            {
+                total += produto.TotalProduto();
+            }
+            return total;
+        }
 
         public override string ToString()
         {

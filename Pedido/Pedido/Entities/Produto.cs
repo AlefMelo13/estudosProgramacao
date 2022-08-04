@@ -1,4 +1,4 @@
-﻿namespace Pedido.Entities
+﻿namespace PedidoVenda.Entities
 {
     public class Produto
     {
