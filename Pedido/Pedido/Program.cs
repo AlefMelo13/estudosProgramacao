@@ -1,8 +1,9 @@
 ﻿using System;
-using Pedido.Entities;
+using PedidoVenda.Entities;
+using PedidoVenda.Services;
 using System.Collections.Generic;
 
-namespace Pedido
+namespace PedidoVenda
 {
     public class Program
     {
@@ -10,17 +11,27 @@ namespace Pedido
         {
             Console.WriteLine("---------- PEDIDO ----------");
             Console.WriteLine();
-
-            Console.WriteLine("Digite os dados do cliente do pedido: ");
-            Console.Write("Nome: ");
-            string nomeCliente = Console.ReadLine();
-            Console.Write("CPF ou CNPJ: ");
-            string cpfCnpj = Console.ReadLine();
-            Console.Write("Limite de crédito: ");
-            decimal limiteCreditoCliente = decimal.Parse(Console.ReadLine());
-            Console.WriteLine();
-
-            Cliente cliente = new Cliente(nomeCliente, cpfCnpj, limiteCreditoCliente);
+            Cliente cliente = new Cliente();
+            try
+            {
+                do
+                {
+                    Console.WriteLine("Digite os dados do cliente do pedido: ");
+                    Console.Write("Nome: ");
+                    string nomeCliente = Console.ReadLine();
+                    Console.Write("CPF ou CNPJ: ");
+                    string cpfCnpj = Console.ReadLine();
+                    Console.Write("Limite de crédito: ");
+                    decimal limiteCreditoCliente = decimal.Parse(Console.ReadLine());
+                    Console.WriteLine();
+                    cliente = new Cliente(nomeCliente, cpfCnpj, limiteCreditoCliente);
+                }
+                while (nomeCliente == null);
+            }
+            catch (ServicoAlerta a)
+            {
+                throw new ServicoAlerta("Erro: " + a.Message);
+            }
 
             Console.Write("Quantos Produtos Deseja Adicionar no Pedido? ");
             int n = int.Parse(Console.ReadLine());
@@ -44,13 +55,13 @@ namespace Pedido
 
                 produto.Add(new Produto(codigoProduto, descricaoProduto, precoProduto, quantidadeProduto));
             }
-            Console.WriteLine();
+            Console.WriteLine("================================");
             Console.WriteLine("Cliente:");
             Console.WriteLine(cliente.ToString());
-            Console.WriteLine();
+            Console.WriteLine("================================");
 
             Console.WriteLine("Produtos do Pedido: ");
-            foreach(Produto prod in produto)
+            foreach (Produto prod in produto)
             {
                 Console.WriteLine(prod.ToString());
             }
