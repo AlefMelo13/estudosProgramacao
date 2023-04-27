@@ -53,7 +53,9 @@ namespace SaqueConta.Entities
         {
             if (numeroConta <= 0 || numeroConta == null)
             {
+                Console.Clear();
                 throw new DomainException("Digite um número de conta válido!");
+                Thread.Sleep(2000);
             }
 
             NumeroConta = numeroConta;

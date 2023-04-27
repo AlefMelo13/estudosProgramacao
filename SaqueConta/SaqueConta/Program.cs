@@ -1,5 +1,6 @@
 ﻿using SaqueConta.Entities;
 using SaqueConta.Entities.Exceptions;
+using System.ComponentModel.Design;
 
 namespace SaqueConta
 {
@@ -7,7 +8,12 @@ namespace SaqueConta
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("---------- SAQUE CONTA ----------");
+            Menu();
+        }
+
+        public static void Menu()
+        {
+            Console.WriteLine("---------- CONTA BANCÁRIA ----------");
             Console.WriteLine();
 
             Conta conta = new Conta();
@@ -27,11 +33,17 @@ namespace SaqueConta
                 }
                 catch (DomainException f)
                 {
-                    Console.WriteLine("Erro: " + f.Message);
+                    Console.WriteLine(f.Message);
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    Menu();
                 }
-                catch(FormatException f)
+                catch (FormatException f)
                 {
-                    Console.WriteLine("Erro: Digite um número inteiro!");
+                    Console.WriteLine("Digite um número inteiro!");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+                    Menu();
                 }
             }
 
