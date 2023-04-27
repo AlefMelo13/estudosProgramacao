@@ -12,26 +12,16 @@ namespace PedidoVenda
             Console.WriteLine("---------- PEDIDO ----------");
             Console.WriteLine();
             Cliente cliente = new Cliente();
-            try
-            {
-                do
-                {
-                    Console.WriteLine("Digite os dados do cliente do pedido: ");
-                    Console.Write("Nome: ");
-                    string nomeCliente = Console.ReadLine();
-                    Console.Write("CPF ou CNPJ: ");
-                    string cpfCnpj = Console.ReadLine();
-                    Console.Write("Limite de crédito: ");
-                    decimal limiteCreditoCliente = decimal.Parse(Console.ReadLine());
-                    Console.WriteLine();
-                    cliente = new Cliente(nomeCliente, cpfCnpj, limiteCreditoCliente);
-                }
-                while (nomeCliente == null);
-            }
-            catch (ServicoAlerta a)
-            {
-                throw new ServicoAlerta("Erro: " + a.Message);
-            }
+
+            Console.WriteLine("Digite os dados do cliente do pedido: ");
+            Console.Write("Nome: ");
+            string nomeCliente = Console.ReadLine();
+            Console.Write("CPF ou CNPJ: ");
+            string cpfCnpj = Console.ReadLine();
+            Console.Write("Limite de crédito: ");
+            decimal limiteCreditoCliente = decimal.Parse(Console.ReadLine());
+            Console.WriteLine();
+            cliente = new Cliente(nomeCliente, cpfCnpj, limiteCreditoCliente);
 
             Console.Write("Quantos Produtos Deseja Adicionar no Pedido? ");
             int n = int.Parse(Console.ReadLine());
